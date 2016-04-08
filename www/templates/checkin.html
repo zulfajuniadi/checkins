@@ -1,0 +1,26 @@
+<ion-view title="Checkin" id="page2">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div ng-if="map"  style="border: 1px solid #ccc; border-radius: 2px">
+            <img ng-src="{{map}}" alt="" style="width:100%">
+        </div>
+        <form class="list" name="checkinForm">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Latitude</span>
+                <input ng-model="$parent.latitude" name="latitude" type="text" placeholder="0.00" readonly required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Longitude</span>
+                <input ng-model="$parent.longitude" name="longitude" type="text" placeholder="0.00" readonly required>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Address</span>
+                <textarea ng-model="$parent.address" name="address" rows="4" required></textarea>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Description</span>
+                <textarea ng-model="$parent.description" name="description" rows="4" required></textarea>
+            </label>
+        </form>
+        <button ng-disabled="!checkinForm.$valid" class="button button-positive button-block" ng-click="save()">Save</button>
+    </ion-content>
+</ion-view>
