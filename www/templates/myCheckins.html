@@ -8,9 +8,9 @@
             on-refresh="doRefresh()">
         </ion-refresher>
         <ion-list>
-            <ion-item ng-repeat="checkin in Session.checkins" ui-sref="location({id: checkin.id})">
-                {{checkin.address | limitTo: 50}}
-                <ion-option-button class="button-assertive icon ion-trash-a" ng-click="removeCheckin(checkin)"></ion-option-button>
+            <ion-item ui-sref="location({id: 1})">
+                Some Address
+                <ion-option-button class="button-assertive icon ion-trash-a" ng-click="removeCheckin({id: 1})"></ion-option-button>
             </ion-item>
         </ion-list>
     </ion-content>
