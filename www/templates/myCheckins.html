@@ -3,10 +3,6 @@
         <button class="button icon ion-navigate" ui-sref="checkin"></button>
     </ion-nav-buttons>
     <ion-content overflow-scroll="true" padding="false" class="has-header">
-        <ion-refresher
-            pulling-text="Pull to refresh..."
-            on-refresh="doRefresh()">
-        </ion-refresher>
         <ion-list>
             <ion-item ng-repeat="checkin in Session.checkins" ui-sref="location({id: checkin.id})">
                 {{checkin.address | limitTo: 50}}

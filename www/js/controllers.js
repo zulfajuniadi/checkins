@@ -7,12 +7,6 @@ angular.module('app.controllers', ['nl2br', 'uuid'])
 })
   
 .controller('myCheckinsCtrl', function($scope, $timeout) {
-    $scope.doRefresh = function() {
-        $timeout(function(){
-           $scope.$broadcast('scroll.refreshComplete');
-        }, 1000);
-    }
-
     $scope.removeCheckin = function(checkin) {
         $scope.Session.checkins.splice($scope.Session.checkins.indexOf(checkin), 1);
     }
